@@ -54,7 +54,7 @@ def contact():
 
 
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found(_e):
     """
     Custom error handler for 404 errors.
 

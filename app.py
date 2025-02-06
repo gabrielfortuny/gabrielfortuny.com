@@ -53,5 +53,19 @@ def contact():
     return render_template("contact.html")
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    """
+    Custom error handler for 404 errors.
+
+    Args:
+        e: The exception that was raised.
+
+    Returns:
+        A rendered template for the 404 error page and a 404 status code.
+    """
+    return render_template("404.html"), 404
+
+
 if __name__ == "__main__":
     app.run(debug=True)

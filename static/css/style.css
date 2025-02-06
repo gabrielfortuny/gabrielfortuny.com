@@ -4,12 +4,21 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: white;
     color: black;
     line-height: 1.6;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navigation Bar */
@@ -78,4 +87,34 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+main {
+    flex: 1;
+}
+
+/* Footer */
+footer {
+    background-color: lightgray;
+    color: black;
+    text-align: center;
+    padding: 15px 0; /* Reduced padding */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8rem; /* Reduced font size */
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem; /* Reduced font size */
 }

@@ -3,6 +3,7 @@ This module contains the main application code for a Flask web application.
 It sets up the Flask app, configures it, and defines the routes for the application.
 """
 
+from datetime import datetime
 from flask import Flask, render_template, abort
 from dotenv import load_dotenv
 
@@ -71,6 +72,17 @@ def page_not_found(_e):
         A rendered template for the 404 error page and a 404 status code.
     """
     return render_template("404.html"), 404
+
+
+@app.context_processor
+def inject_year():
+    """
+    Context processor to inject the current year into templates.
+
+    Returns:
+        A dictionary with the current year.
+    """
+    return {"current_year": datetime.now().year}
 
 
 if __name__ == "__main__":

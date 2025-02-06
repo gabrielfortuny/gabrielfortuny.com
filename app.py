@@ -3,10 +3,13 @@ This module contains the main application code for a Flask web application.
 It sets up the Flask app, configures it, and defines the routes for the application.
 """
 
-from flask import Flask, render_template
+from flask import Flask, render_template, abort
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
-app.config.from_object("config.Config")
+app.config.from_object("config.DevelopmentConfig")
 
 
 @app.route("/")
@@ -28,6 +31,7 @@ def projects():
     Returns:
         A rendered template for the projects page.
     """
+    abort(404)
     return render_template("projects.html")
 
 
@@ -39,6 +43,7 @@ def blog():
     Returns:
         A rendered template for the blog page.
     """
+    abort(404)
     return render_template("blog.html")
 
 
@@ -50,6 +55,7 @@ def contact():
     Returns:
         A rendered template for the contact page.
     """
+    abort(404)
     return render_template("contact.html")
 
 

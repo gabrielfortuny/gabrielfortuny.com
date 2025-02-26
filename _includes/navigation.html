@@ -1,5 +1,8 @@
-<nav>
+<nav aria-label="navigation bar" class="nav-bar">
+  <ul>
+    <li class="nav-home"><a href="/">Gabriel Fortuny</a></li>
     {% for item in site.data.navigation %}
-      <a href="{{ item.link }}"{% if page.url == item.link %} class="current"{% endif %}>{{ item.name }}</a>
+    <li class="nav-links"><a href="{{ item.link }}">{{ item.name }}</a></li>
     {% endfor %}
+  </ul>
 </nav>

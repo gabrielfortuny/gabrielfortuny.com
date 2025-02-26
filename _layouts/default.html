@@ -6,8 +6,9 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
-  <header>{% include navigation.html %}</header>
   <body>
-    {{ content }}
+    <header>{% include navigation.html %}</header>
+    <main>{{ content }}</main>
+    <footer>{% include footer.html %}</footer>
   </body>
 </html>

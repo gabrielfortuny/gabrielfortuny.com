@@ -108,3 +108,35 @@ footer p {
   margin: 0;
   font-size: 0.8rem; /* Reduced font size */
 }
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 17.5%;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+}

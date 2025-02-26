@@ -1,0 +1,10 @@
+<div class="sidebar">
+  <img src="/assets/images/IMG_4595.JPG" alt="My picture" />
+  <nav>
+    <ul>
+      {% for item in site.data.sidebar %}
+      <li><a href="{{ item.url }}" target="_blank">{{ item.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

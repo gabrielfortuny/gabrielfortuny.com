@@ -1,8 +1,12 @@
 - name: GitHub
   url: https://github.com/gabrielfortuny/
+  icon: assets/images/square-github-brands.svg
 - name: LinkedIn
   url: https://linkedin.com/
+  icon: assets/images/linkedin-brands-solid.svg
 - name: Resume
-  url: /assets/files/resume.pdf
+  url: assets/files/resume.pdf
+  icon: assets/images/file-solid.svg
 - name: Contact
   url: /contact/
+  icon: assets/images/envelope-solid.svg

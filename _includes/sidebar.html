@@ -3,7 +3,9 @@
   <nav>
     <ul>
       {% for item in site.data.sidebar %}
-      <li><a href="{{ item.url }}" target="_blank">{{ item.name }}</a></li>
+      <li>
+        <a href="{{ item.url }}" target="_blank"><img src="{{ item.icon }}" alt="{{ item.name }} icon" class="icon" />{{ item.name }}</a>
+      </li>
       {% endfor %}
     </ul>
   </nav>

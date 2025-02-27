@@ -140,3 +140,10 @@ footer p {
   flex: 1;
   padding: 20px;
 }
+
+.sidebar .icon {
+  width: 16px; /* Adjust the size as needed */
+  height: auto; /* Adjust the size as needed */
+  margin-right: 8px; /* Space between icon and text */
+  vertical-align: middle; /* Align icon with text */
+}

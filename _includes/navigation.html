@@ -1,8 +1,8 @@
-<nav aria-label="navigation bar" class="nav-bar">
+<nav aria-label="navigation bar">
+  <a href="/" class="nav-home">Gabriel Fortuny</a>
   <ul>
-    <li class="nav-home"><a href="/">Gabriel Fortuny</a></li>
     {% for item in site.data.navigation %}
-    <li class="nav-links"><a href="{{ item.link }}">{{ item.name }}</a></li>
+    <li><a href="{{ item.link }}">{{ item.name }}</a></li>
     {% endfor %}
   </ul>
 </nav>

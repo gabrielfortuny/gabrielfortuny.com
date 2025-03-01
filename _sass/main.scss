@@ -1,5 +1,5 @@
 * {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html,
@@ -29,13 +29,14 @@ header nav {
 
 header nav .nav-home {
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.75em;
 }
 
 header nav ul {
   display: flex;
   list-style: none;
   gap: 1em;
+  font-size: 1.1em;
 }
 
 header nav a {
@@ -52,7 +53,7 @@ main {
   flex: 1;
 }
 
-.sidebar {
+main .sidebar {
   flex: 1;
   flex-direction: column;
   background-color: #f4f4f4;
@@ -60,37 +61,45 @@ main {
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar img {
+main .sidebar img {
   width: 10em;
   aspect-ratio: 1 / 1;
 }
 
-.sidebar nav ul {
+main .sidebar nav ul {
   list-style: none;
-  padding: 0;
 }
 
-.sidebar nav ul li {
+main .sidebar nav ul li {
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
 }
 
-.sidebar nav ul li a {
+main .sidebar nav ul li a {
   color: #007bff;
   text-decoration: none;
 }
 
-.sidebar nav ul li a img {
+main .sidebar nav ul li a img {
   width: 2em;
   aspect-ratio: 1 / 1;
 }
 
-.content {
+main .content {
   flex: 4;
   padding: 1em;
+  flex-direction: column;
 }
 
 footer {
+  display: flex;
+  align-items: center;
   background-color: lightgray;
-  padding: 1em;
+  padding: 0.25em 1em;
+  font-size: 0.75em;
+  justify-content: center;
+  gap: 5em;
 }
 
 footer a {
@@ -100,4 +109,16 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+footer .links ul {
+  list-style: none;
+}
+
+footer .links ul li {
+}
+
+footer .links ul li a img {
+  width: 1em;
+  aspect-ratio: 1 / 1;
 }

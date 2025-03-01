@@ -1,4 +1,11 @@
-<div class="footer">
+<div class="links">
+  <ul>
+    {% for item in site.data.footer %}
+    <li><a href="{{ item.url }}" target="_blank"><img src="{{ item.icon }}" alt="{{ item.name }} icon" /> {{ item.name}}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+<div class="copyright">
   <p>&copy; 2025 Gabriel Fortuny. All rights reserved.</p>
   <p>
     This work is licensed under a

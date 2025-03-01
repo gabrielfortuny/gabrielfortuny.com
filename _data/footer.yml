@@ -4,9 +4,9 @@
 - name: LinkedIn
   url: https://www.linkedin.com/in/gabrielfortuny/
   icon: /assets/images/linkedin-brands-solid.svg
-- name: Resume
-  url: assets/files/resume.pdf
-  icon: /assets/images/file-solid.svg
 - name: Contact
   url: /contact/
   icon: /assets/images/envelope-solid.svg
+- name: PGP Key
+  url: /assets/files/gabrielfortuny/publickey.asc
+  icon: /assets/images/key-solid.svg

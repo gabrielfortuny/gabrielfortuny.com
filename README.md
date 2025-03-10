@@ -38,10 +38,7 @@ This is the repository for my personal website, [gabrielfortuny.com](https://gab
    bundle exec jekyll serve --livereload
    ```
 
-5. **Open your browser and navigate to:**
-   ```
-   http://localhost:4000
-   ```
+5. **Open your browser and navigate to http://localhost:4000**.
 
 ## License
 

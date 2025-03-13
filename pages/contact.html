@@ -4,19 +4,19 @@ title: Contact
 permalink: /contact/
 ---
 
-<h1>Contact form</h1>
+<h1>Contact Form</h1>
 <form action="https://formspree.io/f/xanqgvzz" method="POST">
   <label>
     Your name:
-    <input type="text" name="name" />
+    <input type="text" name="name" required />
   </label>
   <label>
     Your email:
-    <input type="email" name="email" />
+    <input type="email" name="email" required />
   </label>
   <label>
     Your message:
-    <textarea name="message"></textarea>
+    <textarea name="message" required></textarea>
   </label>
   <button type="submit">Send</button>
 </form>

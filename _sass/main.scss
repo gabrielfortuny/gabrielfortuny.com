@@ -1,4 +1,4 @@
-$header: #39608d;
+$primary: #39608d;
 $background: #f9f9f9;
 
 * {
@@ -19,7 +19,7 @@ body {
 }
 
 header {
-  background-color: $header;
+  background-color: $primary;
   padding: 0.5em 1em;
 }
 
@@ -90,11 +90,11 @@ main .home .intro .text-links ul li a img {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 0;
-  list-style: none; /* Remove bullet points */
+  list-style: none;
 }
 
 .project-card {
-  background-color: #f9f9f9;
+  background-color: $background;
   padding: 16px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -106,7 +106,7 @@ main .home .intro .text-links ul li a img {
 }
 
 .project-card a {
-  color: #39608d;
+  color: $primary;
   text-decoration: none;
   font-weight: bold;
 }
@@ -129,7 +129,7 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: $header;
+  color: $primary;
 }
 
 footer a:hover {

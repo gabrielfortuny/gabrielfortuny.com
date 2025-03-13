@@ -1,6 +1,6 @@
 ---
-name: euchre
-summary: command line card game
+name: Euchre
+summary: A Euchre command line game written in C++
 ---
 
 check it out

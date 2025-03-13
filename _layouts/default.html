@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page.title }}</title>
+
+    <!-- SEO and Social Sharing -->
+    <meta name="description" content="{{ page.description }}" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:type" content="website" />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
   <body>

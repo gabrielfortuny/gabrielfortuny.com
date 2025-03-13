@@ -13,32 +13,32 @@ This is the repository for my personal website, [gabrielfortuny.com](https://gab
 
 ### Build and Run
 
-1. **Clone the repository:**
+1. Clone the repository:
 
    ```sh
    git clone git@github.com:gabrielfortuny/gabrielfortuny.github.io.git
    cd gabrielfortuny.github.io
    ```
 
-2. **Install Jekyll and Bundler:**
+2. Install Jekyll and Bundler:
 
    ```sh
    gem install jekyll bundler
    ```
 
-3. **Install dependencies:**
+3. Install dependencies:
 
    ```sh
    bundle install
    ```
 
-4. **Build the site and make it available on a local server (with automatic reloads when changes are made):**
+4. Build the site and make it available on a local server (with automatic reloads when changes are made):
 
    ```sh
    bundle exec jekyll serve --livereload
    ```
 
-5. **Open your browser and navigate to http://localhost:4000**.
+5. Open your browser and navigate to http://localhost:4000.
 
 ## License
 

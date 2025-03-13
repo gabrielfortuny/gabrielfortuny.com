@@ -52,6 +52,20 @@ main {
   display: flex;
   flex: 1;
   flex-direction: column;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+main .intro {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+main .intro .picture {
+  width: 100px;
+  border-radius: 50%;
 }
 
 footer {

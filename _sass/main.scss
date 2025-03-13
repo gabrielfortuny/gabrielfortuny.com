@@ -79,22 +79,32 @@ footer {
 }
 
 footer a {
-  color: #007bff;
   text-decoration: none;
+  color: $header;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
-footer .links ul {
-  list-style: none;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-footer .links ul li {
+label {
+  display: flex;
+  flex-direction: column;
 }
 
-footer .links ul li a img {
-  width: 1em;
-  aspect-ratio: 1 / 1;
+input,
+textarea {
+  padding: 8px;
+  margin-top: 5px;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
 }

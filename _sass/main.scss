@@ -51,44 +51,6 @@ header nav a:hover {
 main {
   display: flex;
   flex: 1;
-}
-
-main .sidebar {
-  flex: 1;
-  flex-direction: column;
-  background-color: #f4f4f4;
-  padding: 1em;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-main .sidebar img {
-  width: 10em;
-  aspect-ratio: 1 / 1;
-}
-
-main .sidebar nav ul {
-  list-style: none;
-}
-
-main .sidebar nav ul li {
-  flex: 1;
-  flex-direction: row;
-  align-items: center;
-}
-
-main .sidebar nav ul li a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-main .sidebar nav ul li a img {
-  width: 2em;
-  aspect-ratio: 1 / 1;
-}
-
-main .content {
-  flex: 4;
-  padding: 1em;
   flex-direction: column;
 }
 

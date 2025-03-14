@@ -1,6 +1,4 @@
 ---
-name: 370 pipeline
-summary: this was good
+name: Pipeline
+summary:
 ---
-
-do it

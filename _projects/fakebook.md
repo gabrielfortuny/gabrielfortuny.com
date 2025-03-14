@@ -2,5 +2,3 @@
 name: Fakebook
 summary: Database design for a mock social media platform
 ---
-
-Talking about fakebook.

@@ -1,5 +1,7 @@
 $primary: #39608d;
 $background: #f9f9f9;
+$footer: #d3d3d3;
+$text: #555;
 
 * {
   font-family: sans-serif;
@@ -121,7 +123,7 @@ main .home .intro .text-links ul li a img {
 }
 
 footer {
-  background-color: lightgray;
+  background-color: $footer;
   padding: 0.25em;
   font-size: 0.75em;
   text-align: center;

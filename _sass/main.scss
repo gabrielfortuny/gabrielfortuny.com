@@ -63,7 +63,7 @@ main {
   flex-direction: column;
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 10px 20px 20px 20px;
   box-sizing: border-box;
   width: 100%;
 }
@@ -147,11 +147,13 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
 form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 label {
@@ -159,10 +161,21 @@ label {
   flex-direction: column;
 }
 
-input,
-textarea {
+form input,
+form textarea {
+  width: 100%;
   padding: 8px;
   margin-top: 5px;
+  font-family: inherit;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form textarea {
+  height: 150px;
+  resize: vertical;
 }
 
 button {

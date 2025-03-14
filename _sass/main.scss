@@ -20,6 +20,11 @@ body {
   flex-direction: column;
 }
 
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
 header {
   background-color: $primary;
   padding: 0.5em 1em;
@@ -56,6 +61,11 @@ main {
   display: flex;
   flex: 1;
   flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 main .home .intro {

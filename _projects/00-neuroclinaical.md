@@ -1,4 +1,4 @@
 ---
 name: NeuroClinAIcal
-summary: An iOS app that helps clinicians treat epilepsy patients using artificial intelligence
+summary: An iOS app that helps clinicians treat epilepsy using artificial intelligence
 ---

@@ -2,6 +2,7 @@ $primary: #39608d;
 $background: #f9f9f9;
 $footer: #d3d3d3;
 $text: #555;
+$footer-link: #263e5f;
 
 @font-face {
   font-family: "Inter";
@@ -170,7 +171,7 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: $primary;
+  color: $footer-link;
 }
 
 footer a:hover {

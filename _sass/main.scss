@@ -210,6 +210,10 @@ form textarea {
 }
 
 button {
+  -webkit-appearance: none;
+  appearance: none;
   padding: 10px;
   cursor: pointer;
+  border-radius: 8px;
+  border-color: $footer;
 }

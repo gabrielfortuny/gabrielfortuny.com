@@ -1,5 +1,5 @@
 ---
-name: GitHub Repo Backup
+title: GitHub Repo Backup
 summary: A Python script to back up all of your GitHub repositories
 github: https://github.com/gabrielfortuny/backup-github-repos/
 ---

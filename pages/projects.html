@@ -9,7 +9,7 @@ permalink: /projects/
 <ul class="projects-grid">
   {% for project in site.projects %}
   <li class="project-card">
-    <h2><a href="{{ project.url }}">{{ project.name }}</a></h2>
+    <h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
     <p>{{ project.summary }}</p>
   </li>
   {% endfor %}

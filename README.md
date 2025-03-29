@@ -40,6 +40,10 @@ This is the repository for my personal website, [gabrielfortuny.com](https://gab
 
 5. Open your browser and navigate to http://localhost:4000.
 
+## Attribution
+
+- Icons from [Font Awesome](https://fontawesome.com/). All brand icons are trademarks of their respective owners.
+
 ## License
 
 This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. See the [LICENSE](./LICENSE) file for more information.

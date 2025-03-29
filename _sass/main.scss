@@ -124,7 +124,10 @@ main .home .intro .text-links ul li {
 }
 
 main .home .intro .text-links ul li a img {
-  height: 30px;
+  height: 40px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .projects-grid {

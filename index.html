@@ -15,7 +15,9 @@ title: Gabriel Fortuny
       <ul>
         {% for item in site.data.socials %}
         <li>
-          <a href="{{ item.url }}"><img src="{{ item.icon }}" /></a>
+          <a href="{{ item.url }}" title="{{ item.name }}">
+            <img src="{{ item.icon }}" alt="{{ item.name }} button" />
+          </a>
         </li>
         {% endfor %}
       </ul>

@@ -1,8 +1,38 @@
+// Light mode variables
 $primary: #39608d;
 $background: #f9f9f9;
 $footer: #d3d3d3;
-$text: #555;
+$text: black;
 $footer-link: #263e5f;
+$card-shadow: rgba(0, 0, 0, 0.1);
+
+// Dark mode variables - with softer background
+$primary-dark: #5d85b6;
+$background-dark: #1f2937; // Dark blue-gray instead of black
+$footer-dark: #333333;
+$text-dark: #e0e0e0;
+$footer-link-dark: #8baad1;
+$card-shadow-dark: rgba(0, 0, 0, 0.3);
+
+// Define root variables for theming
+:root {
+  --primary: #{$primary};
+  --background: #{$background};
+  --footer: #{$footer};
+  --text: #{$text};
+  --footer-link: #{$footer-link};
+  --card-shadow: #{$card-shadow};
+
+  // Dark mode detection with prefers-color-scheme
+  @media (prefers-color-scheme: dark) {
+    --primary: #{$primary-dark};
+    --background: #{$background-dark};
+    --footer: #{$footer-dark};
+    --text: #{$text-dark};
+    --footer-link: #{$footer-link-dark};
+    --card-shadow: #{$card-shadow-dark};
+  }
+}
 
 @font-face {
   font-family: "Inter";
@@ -22,6 +52,8 @@ $footer-link: #263e5f;
 
 body {
   font-family: "Inter", sans-serif;
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1,
@@ -42,7 +74,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: $background;
+  background-color: var(--background);
 }
 
 body {
@@ -51,12 +83,12 @@ body {
 }
 
 a {
-  color: $primary;
+  color: var(--primary);
   text-decoration: none;
 }
 
 header {
-  background-color: $primary;
+  background-color: var(--primary);
   padding: 0.5em 1em;
 }
 
@@ -124,49 +156,92 @@ main .home .intro .text-links ul li {
 }
 
 main .home .intro .text-links ul li a img {
-  height: 40px;
+  height: 38px;
   width: auto;
   display: inline-block;
   vertical-align: middle;
+  transition: transform 0.2s ease;
+  filter: brightness(0) saturate(100%) invert(35%) sepia(19%) saturate(1209%)
+    hue-rotate(182deg) brightness(92%) contrast(87%);
+}
+
+@media (prefers-color-scheme: dark) {
+  main .home .intro .text-links ul li a img {
+    filter: brightness(0) saturate(100%) invert(56%) sepia(13%) saturate(1185%)
+      hue-rotate(178deg) brightness(86%) contrast(84%);
+  }
+}
+
+main .home .intro .text-links ul li a:hover img {
+  transform: translateY(-3px);
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 25px;
   padding: 0;
   list-style: none;
+  margin: 30px 0;
 }
 
 .project-card {
-  background-color: $background;
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px var(--card-shadow);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--card-shadow);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
 }
 
 .project-card a {
-  color: $primary;
+  color: var(--primary);
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.25rem;
+  display: block;
+  margin-bottom: 12px;
+  transition: color 0.2s ease;
 }
 
 .project-card a:hover {
-  text-decoration: underline;
+  color: lighten($primary-dark, 15%);
 }
 
 .project-card p {
-  color: #555;
-  margin-top: 8px;
+  color: var(--text);
+  margin: 12px 0 8px;
+  line-height: 1.5;
+  font-size: 0.95rem;
 }
 
 footer {
-  background-color: $footer;
+  background-color: var(--footer);
   padding: 0.25em;
   font-size: 0.75em;
   text-align: center;
@@ -174,7 +249,7 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: $footer-link;
+  color: var(--footer-link);
 }
 
 footer a:hover {
@@ -205,6 +280,9 @@ form textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 form textarea {
@@ -218,5 +296,8 @@ button {
   padding: 10px;
   cursor: pointer;
   border-radius: 8px;
-  border-color: $footer;
+  border-color: var(--footer);
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

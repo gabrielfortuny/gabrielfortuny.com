@@ -1,8 +1,38 @@
+// Light mode variables
 $primary: #39608d;
 $background: #f9f9f9;
-$footer: #d3d3d3;
-$text: #555;
+$footer: #e6e6e6;
+$text: black;
 $footer-link: #263e5f;
+$card-shadow: rgba(0, 0, 0, 0.1);
+
+// Dark mode variables - with softer background
+$primary-dark: #39608d;
+$background-dark: #1f2937; // Dark blue-gray instead of black
+$footer-dark: #171e29;
+$text-dark: #e0e0e0;
+$footer-link-dark: #8baad1;
+$card-shadow-dark: rgba(0, 0, 0, 0.3);
+
+// Define root variables for theming
+:root {
+  --primary: #{$primary};
+  --background: #{$background};
+  --footer: #{$footer};
+  --text: #{$text};
+  --footer-link: #{$footer-link};
+  --card-shadow: #{$card-shadow};
+
+  // Dark mode detection with prefers-color-scheme
+  @media (prefers-color-scheme: dark) {
+    --primary: #{$primary-dark};
+    --background: #{$background-dark};
+    --footer: #{$footer-dark};
+    --text: #{$text-dark};
+    --footer-link: #{$footer-link-dark};
+    --card-shadow: #{$card-shadow-dark};
+  }
+}
 
 @font-face {
   font-family: "Inter";
@@ -22,6 +52,8 @@ $footer-link: #263e5f;
 
 body {
   font-family: "Inter", sans-serif;
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1,
@@ -42,7 +74,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: $background;
+  background-color: var(--background);
 }
 
 body {
@@ -51,12 +83,12 @@ body {
 }
 
 a {
-  color: $primary;
+  color: var(--primary);
   text-decoration: none;
 }
 
 header {
-  background-color: $primary;
+  background-color: var(--primary);
   padding: 0.5em 1em;
 }
 
@@ -124,49 +156,227 @@ main .home .intro .text-links ul li {
 }
 
 main .home .intro .text-links ul li a img {
-  height: 40px;
+  height: 38px;
   width: auto;
   display: inline-block;
   vertical-align: middle;
+  transition: transform 0.2s ease;
+  filter: brightness(0) saturate(100%) invert(35%) sepia(19%) saturate(1209%)
+    hue-rotate(182deg) brightness(92%) contrast(87%);
+}
+
+@media (prefers-color-scheme: dark) {
+  main .home .intro .text-links ul li a img {
+    filter: brightness(0) saturate(100%) invert(56%) sepia(13%) saturate(1185%)
+      hue-rotate(178deg) brightness(86%) contrast(84%);
+  }
+}
+
+main .home .intro .text-links ul li a:hover img {
+  transform: translateY(-3px);
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 25px;
   padding: 0;
   list-style: none;
+  margin: 30px 0; /* Changed from 30px auto to 30px 0 */
+  max-width: 100%; /* Changed from fixed 1200px to 100% */
+  width: 100%;
 }
 
+/* Lighter project cards for better accessibility */
 .project-card {
-  background-color: $background;
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
+  /* Lighter background with better contrast */
+  background-color: rgba(255, 255, 255, 0.1); /* Increased from 0.05 */
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px var(--card-shadow);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Increased from 0.1 */
+  position: relative;
+  overflow: hidden;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
+/* Project card top border indicator */
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
+/* Brighter project title for better readability */
 .project-card a {
-  color: $primary;
+  color: var(--primary);
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.25rem;
+  display: block;
+  margin-bottom: 12px;
+  transition: color 0.2s ease;
 }
 
-.project-card a:hover {
-  text-decoration: underline;
-}
-
+/* Enhanced project description text */
 .project-card p {
-  color: #555;
-  margin-top: 8px;
+  color: var(--text);
+  margin: 12px 0 8px;
+  line-height: 1.6; /* Slightly increased for readability */
+  font-size: 1rem; /* Slightly increased from 0.95rem */
+}
+
+/* Dark mode specific enhancements */
+@media (prefers-color-scheme: dark) {
+  .project-card {
+    background-color: rgba(255, 255, 255, 0.12); /* Even lighter in dark mode */
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .project-card a {
+    color: #78a6d8; /* Brighter blue for better contrast in dark mode */
+  }
+
+  .project-card p {
+    color: white; /* Brighter text in dark mode */
+  }
+
+  /* Active indicator enhancement */
+  .project-card::before {
+    background: #78a6d8; /* Matching the title color */
+  }
+}
+
+/* Improve hover state */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--card-shadow);
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.15); /* Slightly brighter on hover */
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Contact page heading */
+.contact-heading {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+/* Contact form to match project cards */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1); /* Match the card background */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px var(--card-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Match the card border */
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 1em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(93, 133, 182, 0.2);
+}
+
+form textarea {
+  height: 180px;
+  resize: vertical;
+}
+
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  filter: brightness(110%);
+}
+
+/* Dark mode button adjustments for accessibility */
+@media (prefers-color-scheme: dark) {
+  button {
+    background-color: #2c5282; /* Darker blue with better contrast against white */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  button:hover {
+    background-color: #1e4272; /* Even darker on hover */
+  }
+}
+
+/* Light mode overrides */
+@media (prefers-color-scheme: light) {
+  form {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  form input,
+  form textarea {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+  }
+
+  .project-card {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
 }
 
 footer {
-  background-color: $footer;
+  background-color: var(--footer);
   padding: 0.25em;
   font-size: 0.75em;
   text-align: center;
@@ -174,49 +384,26 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: $footer-link;
+  color: var(--footer-link);
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 600px;
-  width: 100%;
-  margin: 0 auto;
-}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  form {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
 
-label {
-  display: flex;
-  flex-direction: column;
-}
+  main .home .intro {
+    flex-direction: column;
+    text-align: center;
+  }
 
-form input,
-form textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  font-family: inherit;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-form textarea {
-  height: 150px;
-  resize: vertical;
-}
-
-button {
-  -webkit-appearance: none;
-  appearance: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 8px;
-  border-color: $footer;
+  main .home .intro .text-links ul {
+    justify-content: center;
+  }
 }

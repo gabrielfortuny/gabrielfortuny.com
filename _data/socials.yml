@@ -6,7 +6,7 @@
   icon: /assets/images/linkedin.svg
 - name: Resume
   url: assets/files/resume.pdf
-  icon: /assets/images/square-lines.svg
+  icon: /assets/images/resume.svg
 - name: Contact
   url: /contact/
   icon: /assets/images/envelope.svg

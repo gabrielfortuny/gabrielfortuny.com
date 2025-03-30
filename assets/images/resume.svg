@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <path d="M 448 64.3 L 448 447.7 C 448 465.5 433.6 480 416 480 L 31.9 480 C 14.3 480 0 465.5 0 447.7 L 0 64.3 C 0 46.5 14.3 32 31.9 32 L 416 32 C 433.6 32 448 46.5 448 64.3 Z M 108.387 412.25 L 339.629 412.25 C 344.778 412.25 349 408.047 349 402.874 L 349 158.328 C 349 155.828 347.907 153.452 346.185 151.687 L 296.964 102.5 C 295.242 100.734 292.907 99.75 290.407 99.75 L 108.387 99.75 C 103.073 99.75 99 103.952 99 109.124 L 99 402.874 C 99 408.047 103.073 412.25 108.387 412.25 Z" style="fill: rgb(56, 96, 141);"/>
+  <path d="M 161.501 224.75 L 286.501 224.75" stroke-linecap="round" stroke-linejoin="round" style="paint-order: fill; fill: rgba(0, 0, 0, 0); transform-origin: 224.001px 224.75px 0px; stroke-width: 15px; stroke: rgb(56, 96, 141);" transform="matrix(1, -0.000001, 0.000001, 1, 0, 0)"/>
+  <path d="M 161.498 349.752 L 286.498 349.752" stroke-linecap="round" stroke-linejoin="round" style="paint-order: fill; fill: rgba(0, 0, 0, 0); stroke-width: 15px; stroke: rgb(56, 96, 141);"/>
+  <path d="M 161.498 287.252 L 223.998 287.252" stroke-linecap="round" stroke-linejoin="round" style="paint-order: fill; fill: rgba(0, 0, 0, 0); stroke-width: 15px; stroke: rgb(56, 96, 141);"/>
+  <path d="M 286.5 99.75 L 286.5 152.874 C 286.5 158.047 290.556 162.25 295.871 162.25 L 349 162.25" stroke-linecap="round" stroke-linejoin="round" style="paint-order: fill; fill: rgba(0, 0, 0, 0); stroke-width: 17px; stroke: rgb(56, 96, 141);"/>
+</svg>

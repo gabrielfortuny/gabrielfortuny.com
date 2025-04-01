@@ -3,6 +3,7 @@ $primary: #39608d;
 $background: #f9f9f9;
 $footer: #e6e6e6;
 $text: black;
+$links: $primary;
 $footer-link: $primary;
 $card-shadow: rgba(0, 0, 0, 0.1);
 
@@ -11,7 +12,8 @@ $primary-dark: #39608d;
 $background-dark: #1f2937; // Dark blue-gray instead of black
 $footer-dark: #171e29;
 $text-dark: #e0e0e0;
-$footer-link-dark: #8baad1;
+$links-dark: #8baad1;
+$footer-link-dark: $links-dark;
 $card-shadow-dark: rgba(0, 0, 0, 0.3);
 
 // Define root variables for theming
@@ -20,6 +22,7 @@ $card-shadow-dark: rgba(0, 0, 0, 0.3);
   --background: #{$background};
   --footer: #{$footer};
   --text: #{$text};
+  --links: #{$links};
   --footer-link: #{$footer-link};
   --card-shadow: #{$card-shadow};
 
@@ -29,6 +32,7 @@ $card-shadow-dark: rgba(0, 0, 0, 0.3);
     --background: #{$background-dark};
     --footer: #{$footer-dark};
     --text: #{$text-dark};
+    --links: #{$links-dark};
     --footer-link: #{$footer-link-dark};
     --card-shadow: #{$card-shadow-dark};
   }
@@ -83,7 +87,7 @@ body {
 }
 
 a {
-  color: var(--primary);
+  color: var(--links);
   text-decoration: none;
 }
 
@@ -161,14 +165,14 @@ main .home .intro .text-links ul li a img {
   display: inline-block;
   vertical-align: middle;
   transition: transform 0.2s ease;
-  filter: brightness(0) saturate(100%) invert(35%) sepia(19%) saturate(1209%)
-    hue-rotate(182deg) brightness(92%) contrast(87%);
+  filter: brightness(0) saturate(100%) invert(35%) sepia(19%) saturate(1209%) hue-rotate(182deg)
+    brightness(92%) contrast(87%);
 }
 
 @media (prefers-color-scheme: dark) {
   main .home .intro .text-links ul li a img {
-    filter: brightness(0) saturate(100%) invert(56%) sepia(13%) saturate(1185%)
-      hue-rotate(178deg) brightness(86%) contrast(84%);
+    filter: brightness(0) saturate(100%) invert(56%) sepia(13%) saturate(1185%) hue-rotate(178deg)
+      brightness(86%) contrast(84%);
   }
 }
 

@@ -146,7 +146,7 @@ main .home .intro .home-picture {
   border-radius: 50%;
 }
 
-main .home .intro .text-links ul {
+.text-links ul {
   display: flex;
   gap: 1em;
   list-style: none;
@@ -154,12 +154,12 @@ main .home .intro .text-links ul {
   margin: 0;
 }
 
-main .home .intro .text-links ul li {
+.text-links ul li {
   display: flex;
   align-items: center;
 }
 
-main .home .intro .text-links ul li a img {
+.text-links ul li a img {
   height: 38px;
   width: auto;
   display: inline-block;
@@ -170,13 +170,13 @@ main .home .intro .text-links ul li a img {
 }
 
 @media (prefers-color-scheme: dark) {
-  main .home .intro .text-links ul li a img {
+  .text-links ul li a img {
     filter: brightness(0) saturate(100%) invert(56%) sepia(13%) saturate(1185%) hue-rotate(178deg)
       brightness(86%) contrast(84%);
   }
 }
 
-main .home .intro .text-links ul li a:hover img {
+.text-links ul li a:hover img {
   transform: translateY(-3px);
 }
 

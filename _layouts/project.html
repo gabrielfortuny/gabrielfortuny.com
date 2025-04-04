@@ -2,17 +2,22 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
-<h2>{{ page.summary }}</h2>
+<div class="text-links">
+  <h1>{{ page.title }}</h1>
+  <h2>{{ page.summary }}</h2>
+  <ul>
+    {% if page.github %}
+    <li>
+      <a href="{{ page.github }}" title="View on GitHub">
+        <img src="/assets/images/github.svg" alt="GitHub button" />
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</div>
 
-{% if page.github %}
-<a href="{{ page.github }}" title="GitHub"><img src="/assets/images/github.svg" alt="GitHub button" style="height: 38px; width: auto"/></a>
-{% endif %}
-
-{% assign content_strip = content | strip %}
-{% if content_strip == blank or content_strip == empty %}
+{% assign content_strip = content | strip %} {% if content_strip == blank or content_strip == empty
+%}
 <p><em>Description coming soon...</em></p>
 <p><a href="/projects">Back to Projects</a></p>
-{% else %}
-{{ content }}
-{% endif %}
+{% else %} {{ content }} {% endif %}

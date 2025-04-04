@@ -5,4 +5,14 @@ layout: default
 <h1>{{ page.title }}</h1>
 <h2>{{ page.summary }}</h2>
 
+{% if page.github %}
+<a href="{{ page.github }}" title="GitHub"><img src="/assets/images/github.svg" alt="GitHub button" style="height: 38px; width: auto"/></a>
+{% endif %}
+
+{% assign content_strip = content | strip %}
+{% if content_strip == blank or content_strip == empty %}
+<p><em>Description coming soon...</em></p>
+<p><a href="/projects">Back to Projects</a></p>
+{% else %}
 {{ content }}
+{% endif %}

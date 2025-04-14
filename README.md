@@ -18,7 +18,7 @@ This is the repository for my personal website, [gabrielfortuny.com](https://gab
    cd gabrielfortuny.com
    ```
 
-2. Run the installation script:
+2. Install Jekyll, Bundler, and all required dependencies:
 
    ```sh
    ./bin/install

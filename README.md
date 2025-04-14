@@ -2,43 +2,35 @@
 
 This is the repository for my personal website, [gabrielfortuny.com](https://gabrielfortuny.com/). The website is built using [Jekyll](https://jekyllrb.com/), a static site generator, and is hosted on [GitHub Pages](https://pages.github.com/).
 
-**This project is currently a work in progress.**
-
 ## Setup Instructions
 
 ### Prerequisites
 
 - [Git](https://git-scm.com/)
-- [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
+- See Jekyll's installation [documentation](https://jekyllrb.com/docs/installation/)
 
 ### Build and Run
 
 1. Clone the repository:
 
    ```sh
-   git clone git@github.com:gabrielfortuny/gabrielfortuny.github.io.git
-   cd gabrielfortuny.github.io
+   git clone git@github.com:gabrielfortuny/gabrielfortuny.com.git
+   cd gabrielfortuny.com
    ```
 
-2. Install Jekyll and Bundler:
+2. Run the installation script:
 
    ```sh
-   gem install jekyll bundler
+   ./bin/install
    ```
 
-3. Install dependencies:
+3. Build the site and make it available on a local server (with automatic reloads when changes are made):
 
    ```sh
-   bundle install
+   ./bin/build
    ```
 
-4. Build the site and make it available on a local server (with automatic reloads when changes are made):
-
-   ```sh
-   bundle exec jekyll serve --livereload
-   ```
-
-5. Open your browser and navigate to http://localhost:4000.
+4. Open your browser and navigate to http://localhost:4000.
 
 ## Attribution
 

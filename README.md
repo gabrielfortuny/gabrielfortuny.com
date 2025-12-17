@@ -39,6 +39,10 @@ This is the repository for my personal website, [gabrielfortuny.com](https://gab
 - Icons from [Iconoir](https://iconoir.com/) are licensed under the [MIT License](https://github.com/iconoir-icons/iconoir/blob/main/LICENSE).
 - Favicon generated with [favicon.io](https://favicon.io/).
 
+## Accessibility
+
+Accessibility check using WAVE: https://wave.webaim.org/report#/gabrielfortuny.com.
+
 ## License
 
 This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. See the [LICENSE](./LICENSE) file for more information.

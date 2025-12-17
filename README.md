@@ -41,7 +41,7 @@ This is the repository for my personal website, [gabrielfortuny.com](https://gab
 
 ## Accessibility
 
-Accessibility check using WAVE: https://wave.webaim.org/report#/gabrielfortuny.com.
+Accessibility check using WAVE: <https://wave.webaim.org/report#/gabrielfortuny.com>.
 
 ## License
 

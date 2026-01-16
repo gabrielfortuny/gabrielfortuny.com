@@ -1,0 +1,11 @@
+User-agent: *
+Allow:  /
+
+Disallow: /assets/
+Disallow: /_data/
+Disallow: /_includes/
+Disallow: /_layouts/
+Disallow: /_sass/
+Disallow: /bin/
+
+Sitemap: https://gabrielfortuny.com/sitemap.xml

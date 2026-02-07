@@ -1,6 +1,0 @@
-This favicon was generated using the following font:
-
-- Font Title: Inter
-- Font Author: Rasmus Andersson
-- Font Source: https://rsms.me/inter/
-- Font License: SIL Open Font License

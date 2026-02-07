@@ -36,8 +36,6 @@ This is the repository for my personal website, [gabrielfortuny.com](https://gab
 
 - Font is [Inter](https://rsms.me/inter/) designed by [Rasmus Andersson](https://rsms.me/) and licensed under the [SIL Open Font License](https://openfontlicense.org/open-font-license-official-text/).
 - Icons from [Font Awesome](https://fontawesome.com/) are licensed under the [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/). All brand icons are trademarks of their respective owners.
-- Icons from [Iconoir](https://iconoir.com/) are licensed under the [MIT License](https://github.com/iconoir-icons/iconoir/blob/main/LICENSE).
-- Favicon generated with [favicon.io](https://favicon.io/).
 
 ## Accessibility
 

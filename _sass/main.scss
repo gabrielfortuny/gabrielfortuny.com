@@ -1,413 +1,91 @@
-// Light mode variables
-$primary: #39608d;
-$background: #f9f9f9;
-$footer: #e6e6e6;
-$text: black;
-$links: $primary;
-$footer-link: $primary;
-$card-shadow: rgba(0, 0, 0, 0.1);
-
-// Dark mode variables - with softer background
-$primary-dark: #39608d;
-$background-dark: #1f2937; // Dark blue-gray instead of black
-$footer-dark: #171e29;
-$text-dark: #e0e0e0;
-$links-dark: #8baad1;
-$footer-link-dark: $links-dark;
-$card-shadow-dark: rgba(0, 0, 0, 0.3);
-
-// Define root variables for theming
-:root {
-  --primary: #{$primary};
-  --background: #{$background};
-  --footer: #{$footer};
-  --text: #{$text};
-  --links: #{$links};
-  --footer-link: #{$footer-link};
-  --card-shadow: #{$card-shadow};
-
-  // Dark mode detection with prefers-color-scheme
-  @media (prefers-color-scheme: dark) {
-    --primary: #{$primary-dark};
-    --background: #{$background-dark};
-    --footer: #{$footer-dark};
-    --text: #{$text-dark};
-    --links: #{$links-dark};
-    --footer-link: #{$footer-link-dark};
-    --card-shadow: #{$card-shadow-dark};
-  }
-}
-
 @font-face {
   font-family: "Inter";
-  src: url("/assets/fonts/Inter-4.1/web/Inter-Regular.woff2") format("woff2"),
-    url("/assets/fonts/Inter-4.1/web/Inter-Regular.woff") format("woff");
+  src: url("/assets/fonts/Inter-4.1/web/Inter-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
-  src: url("/assets/fonts/Inter-4.1/web/Inter-Bold.woff2") format("woff2"),
-    url("/assets/fonts/Inter-4.1/web/Inter-Bold.woff") format("woff");
+  src: url("/assets/fonts/Inter-4.1/web/Inter-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 
-body {
-  font-family: "Inter", sans-serif;
-  color: var(--text);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-}
-
-p {
-  font-weight: 400;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
   height: 100%;
-  background-color: var(--background);
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-}
-
-a {
-  color: var(--links);
-  text-decoration: none;
-}
-
-header {
-  background-color: var(--primary);
-  padding: 0.5em 1em;
-}
-
-header nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header nav .nav-home {
-  font-weight: bold;
-  font-size: 1.5em;
-}
-
-header nav ul {
-  display: flex;
-  list-style: none;
-  gap: 1em;
-  font-size: 1em;
-}
-
-header nav a {
-  color: white;
-  text-decoration: none;
-}
-
-header nav a:hover {
-  text-decoration: underline;
+  font-family: "Inter", sans-serif;
+  background-color: #fafafa;
+  color: #111;
 }
 
 main {
   display: flex;
-  flex: 1;
   flex-direction: column;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 10px 20px 20px 20px;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-main .home .intro {
-  display: flex;
   align-items: center;
-  gap: 1em;
-  padding-bottom: 20px;
+  padding-top: 20vh;
+  text-align: center;
 }
 
-main .home .intro .home-picture {
-  width: 125px;
-  border-radius: 50%;
+h1 {
+  font-weight: 700;
+  font-size: 2.25rem;
+  letter-spacing: -0.02em;
 }
 
-.text-links ul {
-  display: flex;
-  gap: 1em;
+h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+p {
+  font-size: 1.125rem;
+  margin-top: 0.125rem;
+}
+
+a {
+  color: #38608d;
+}
+
+ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.text-links ul li {
   display: flex;
-  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
 }
 
-.text-links ul li a img {
-  height: 38px;
+ul li a img {
+  height: 2.5rem;
   width: auto;
-  display: inline-block;
-  vertical-align: middle;
-  transition: transform 0.2s ease;
-  filter: brightness(0) saturate(100%) invert(35%) sepia(19%) saturate(1209%) hue-rotate(182deg)
-    brightness(92%) contrast(87%);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  .text-links ul li a img {
-    filter: brightness(0) saturate(100%) invert(56%) sepia(13%) saturate(1185%) hue-rotate(178deg)
-      brightness(86%) contrast(84%);
-  }
-}
-
-.text-links ul li a:hover img {
-  transform: translateY(-3px);
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  padding: 0;
-  list-style: none;
-  margin: 30px 0; /* Changed from 30px auto to 30px 0 */
-  max-width: 100%; /* Changed from fixed 1200px to 100% */
-  width: 100%;
-}
-
-/* Lighter project cards for better accessibility */
-.project-card {
-  /* Lighter background with better contrast */
-  background-color: rgba(255, 255, 255, 0.1); /* Increased from 0.05 */
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px var(--card-shadow);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Increased from 0.1 */
-  position: relative;
-  overflow: hidden;
-}
-
-/* Project card top border indicator */
-.project-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--primary);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-/* Brighter project title for better readability */
-.project-card a {
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.25rem;
-  display: block;
-  margin-bottom: 12px;
-  transition: color 0.2s ease;
-}
-
-/* Enhanced project description text */
-.project-card p {
-  color: var(--text);
-  margin: 12px 0 8px;
-  line-height: 1.6; /* Slightly increased for readability */
-  font-size: 1rem; /* Slightly increased from 0.95rem */
-}
-
-/* Dark mode specific enhancements */
-@media (prefers-color-scheme: dark) {
-  .project-card {
-    background-color: rgba(255, 255, 255, 0.12); /* Even lighter in dark mode */
-    border-color: rgba(255, 255, 255, 0.25);
-  }
-
-  .project-card a {
-    color: #78a6d8; /* Brighter blue for better contrast in dark mode */
-  }
-
-  .project-card p {
-    color: white; /* Brighter text in dark mode */
-  }
-
-  /* Active indicator enhancement */
-  .project-card::before {
-    background: #78a6d8; /* Matching the title color */
-  }
-}
-
-/* Improve hover state */
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px var(--card-shadow);
-  border-color: rgba(255, 255, 255, 0.3);
-  background-color: rgba(255, 255, 255, 0.15); /* Slightly brighter on hover */
-}
-
-.project-card:hover::before {
-  transform: scaleX(1);
-}
-
-/* Contact page heading */
-.contact-heading {
-  margin-bottom: 2rem;
-  text-align: center;
-  font-size: 2.5rem;
-  color: var(--primary);
-}
-
-/* Contact form to match project cards */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 600px;
-  width: 100%;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.1); /* Match the card background */
-  border-radius: 12px;
-  box-shadow: 0 6px 12px var(--card-shadow);
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Match the card border */
-}
-
-label {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  font-weight: 500;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 12px;
-  font-family: inherit;
-  font-size: 1em;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.1);
-  color: var(--text);
-  transition: all 0.3s ease;
-}
-
-form input:focus,
-form textarea:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 2px rgba(93, 133, 182, 0.2);
-}
-
-form textarea {
-  height: 180px;
-  resize: vertical;
-}
-
-button {
-  -webkit-appearance: none;
-  appearance: none;
-  padding: 12px 24px;
-  cursor: pointer;
-  border-radius: 8px;
-  border: none;
-  background-color: var(--primary);
-  color: white;
-  font-weight: 600;
-  font-size: 1em;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 10px;
-}
-
-button:hover {
+ul li a:hover img {
+  opacity: 0.8;
   transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  filter: brightness(110%);
 }
 
-/* Dark mode button adjustments for accessibility */
 @media (prefers-color-scheme: dark) {
-  button {
-    background-color: #2c5282; /* Darker blue with better contrast against white */
-    border: 1px solid rgba(255, 255, 255, 0.4);
+  body {
+    background-color: #111;
+    color: #e5e5e5;
   }
 
-  button:hover {
-    background-color: #1e4272; /* Even darker on hover */
-  }
-}
-
-/* Light mode overrides */
-@media (prefers-color-scheme: light) {
-  form {
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  form input,
-  form textarea {
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-  }
-
-  .project-card {
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-}
-
-footer {
-  background-color: var(--footer);
-  padding: 0.25em;
-  font-size: 0.75em;
-  text-align: center;
-}
-
-footer a {
-  text-decoration: none;
-  color: var(--footer-link);
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  form {
-    padding: 1.5rem;
-    margin: 1rem auto;
-  }
-
-  main .home .intro {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  main .home .intro .text-links ul {
-    justify-content: center;
+  h2 {
+    color: #888;
   }
 }

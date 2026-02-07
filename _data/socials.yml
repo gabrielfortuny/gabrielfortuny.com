@@ -2,11 +2,8 @@
   url: https://github.com/gabrielfortuny/
   icon: /assets/images/github.svg
 - name: LinkedIn
-  url: https://www.linkedin.com/in/gabrielfortuny/
+  url: https://linkedin.com/in/gabrielfortuny/
   icon: /assets/images/linkedin.svg
 - name: Resume
   url: assets/files/gabriel-fortuny-resume.pdf
   icon: /assets/images/resume.svg
-- name: Contact
-  url: /contact/
-  icon: /assets/images/envelope.svg

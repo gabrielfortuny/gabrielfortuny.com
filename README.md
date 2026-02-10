@@ -43,4 +43,4 @@ Accessibility check using WAVE: <https://wave.webaim.org/report#/gabrielfortuny.
 
 ## License
 
-This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. See the [LICENSE](./LICENSE) file for more information.
+[MIT](/LICENSE)

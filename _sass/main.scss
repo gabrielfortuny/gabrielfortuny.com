@@ -81,21 +81,6 @@ ul li a:hover img {
   transform: translateY(-2px);
 }
 
-// Mobile responsive adjustments
-@media (max-width: 640px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.375rem;
-  }
-
-  ul li a img {
-    height: 1.875rem;
-  }
-}
-
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #111;

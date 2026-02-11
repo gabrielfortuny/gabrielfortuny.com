@@ -25,15 +25,17 @@ body {
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: #fafafa;
+  background-color: #fbfbfb;
   color: #111;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20vh;
+  padding-top: min(20vh, 8rem);
   text-align: center;
 }
 
@@ -46,8 +48,8 @@ h1 {
 h2 {
   font-weight: 400;
   font-size: 1.5rem;
-  color: #666;
-  margin-top: 0.25rem;
+  color: #555;
+  margin-top: 1.25rem;
 }
 
 p {
@@ -67,7 +69,7 @@ ul {
 }
 
 ul li a img {
-  height: 2.5rem;
+  height: 2.75rem;
   width: auto;
   transition:
     opacity 0.2s ease,
@@ -79,6 +81,21 @@ ul li a:hover img {
   transform: translateY(-2px);
 }
 
+// Mobile responsive adjustments
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.375rem;
+  }
+
+  ul li a img {
+    height: 1.875rem;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #111;
@@ -86,6 +103,6 @@ ul li a:hover img {
   }
 
   h2 {
-    color: #888;
+    color: #aaa;
   }
 }

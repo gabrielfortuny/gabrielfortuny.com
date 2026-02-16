@@ -35,8 +35,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: min(20vh, 8rem);
   text-align: center;
+  padding-top: min(20vh, 8rem);
+  padding-left: min(5vw, 1.5rem);
+  padding-right: min(5vw, 1.5rem);
 }
 
 h1 {

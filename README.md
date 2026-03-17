@@ -30,7 +30,7 @@ This is the repository for my personal website, [gabrielfortuny.com](https://gab
    ./bin/build
    ```
 
-4. Open your browser and navigate to http://localhost:4000.
+4. Open your browser and navigate to <http://localhost:4000>.
 
 ## Attribution
 

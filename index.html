@@ -13,21 +13,21 @@ permalink: /
 <ul>
   {% for item in site.data.socials %}
   <li>
-    <a href="{{ item.url }}" title="{{ item.name }}" target="_blank">
+    <a
+      id="{{ item.name }}"
+      href="{{ item.url }}"
+      title="{{ item.name }}"
+      target="_blank"
+    >
       <img src="{{ item.icon }}" alt="{{ item.name }} button" />
     </a>
   </li>
   {% endfor %}
-  <li>
-    <a id="email" title="Email" target="_blank">
-      <img src="/assets/images/envelope.svg" alt="Email button" />
-    </a>
-  </li>
 </ul>
 
 <script>
   var s = "hxezlzlo gxabrielforztunqy cqom";
   var e = s.replace(/[xzq]/g, "").replace(" ", "@").replaceAll(" ", ".");
-  var a = document.getElementById("email");
+  var a = document.getElementById("Email");
   a.href = "mailto:" + e;
 </script>

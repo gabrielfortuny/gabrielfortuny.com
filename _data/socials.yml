@@ -7,3 +7,5 @@
 - name: Resume
   url: assets/files/gabriel-fortuny-resume.pdf
   icon: /assets/images/resume.svg
+- name: Email
+  icon: /assets/images/envelope.svg
